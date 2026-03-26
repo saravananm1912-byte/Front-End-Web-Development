@@ -1,0 +1,27 @@
+<!<!DOCTYPE html>
+<html>
+<body>
+<form onsubmit="return validate()">
+  Name: <input type="text" id="name"><br><br>
+  Email: <input type="text" id="email"><br><br>
+  <button type="submit">Submit</button>
+</form>
+<script>
+function validate() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  if (name == "") {
+    alert("Enter name");
+    return false;
+  }
+  if (!email.includes("@")) {
+    alert("Enter valid email");
+    return false;
+  }
+  alert("Form submitted Successfully");
+  return true;
+}
+</script>
+
+</body>
+</html>
